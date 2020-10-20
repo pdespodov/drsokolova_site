@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.15;
+}
+
+body {
+    font-family: Roboto,sans-serif;
+    color: #333;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+
+
+a {
+    color: #d59541;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+.btn {
+    background-color: #2f5572;
+    color: #fff;
+    text-decoration: none;
+    padding: .75rem 1.2rem;
+    display: inline-block;
+}
