@@ -1,0 +1,12 @@
+.work-time-div li {
+    margin-bottom: 0.5em;
+}
+
+.work-time-highlight {
+    color: #eabd80;
+}
+
+#icon-week, #icon-weekend, #icon-week2 {
+    width: 46px;
+    height: 46px;
+}

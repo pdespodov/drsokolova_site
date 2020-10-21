@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="wrapper">
     <div class="site-header-logo">
-      <div class="site-header-logo-graphic icon icon-clear-logo">Д-р Соколова GP</div>
+      <div class="site-header-logo-graphic icon icon-clear-logo">Д-р Искра Соколова <br/> <i>Семеен лекар</i></div>
     </div>
 
     <div class="site-header-menu-icon" id="site-header-menu-icon" (click)="toggleMobileMenu($event)">
@@ -37,18 +37,24 @@
   </div>
 </div>
 
-<div id="features" class="page-section page-section-blue">
-  <div class="wrapper">
-    <h2 class="section-title">
-      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-watch" fill="#d59541" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M4 14.333v-1.86A5.985 5.985 0 0 1 2 8c0-1.777.772-3.374 2-4.472V1.667C4 .747 4.746 0 5.667 0h4.666C11.253 0 12 .746 12 1.667v1.86A5.985 5.985 0 0 1 14 8a5.985 5.985 0 0 1-2 4.472v1.861c0 .92-.746 1.667-1.667 1.667H5.667C4.747 16 4 15.254 4 14.333zM13 8A5 5 0 1 0 3 8a5 5 0 0 0 10 0z"/>
-        <path d="M13.918 8.993A.502.502 0 0 0 14.5 8.5v-1a.5.5 0 0 0-.582-.493 6.044 6.044 0 0 1 0 1.986z"/>
-        <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H6a.5.5 0 0 1 0-1h1.5V5a.5.5 0 0 1 .5-.5z"/>
-      </svg>
-      Работно време
-    </h2>
+<router-outlet></router-outlet>
+<div class="row row--gutters">
+  <div class="row__medium-4 row__medium-4--larger row__b-margin-until-medium">
+    <picture>
+      <source sizes="404px" data-srcset="assets/images/our-start.jpg 404w, assets/images/our-start-hi-dpi.jpg 808w" media="(min-width: 1020px)" srcset="assets/images/our-start.jpg 404w, assets/images/our-start-hi-dpi.jpg 808w">
+      <source sizes="320px" data-srcset="assets/images/our-start-portrait.jpg 382w, assets/images/our-start-portrait-hi-dpi.jpg 764w" media="(min-width: 800px)" srcset="assets/images/our-start-portrait.jpg 382w, assets/images/our-start-portrait-hi-dpi.jpg 764w">
+      <img class=" lazyloaded" data-srcset="assets/images/our-start-landscape.jpg 800w, assets/images/our-start-landscape-hi-dpi.jpg 1600w" alt="Our founder, Jane Doe" srcset="assets/images/our-start-landscape.jpg 800w, assets/images/our-start-landscape-hi-dpi.jpg 1600w">
+    </picture>
+  </div>
+  <div class="row__medium-8 row__medium-8--smaller">
+    <div class="generic-content-container">
+      <h2 class="headline headline--no-t-margin">Here’s how we got started…</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <a href="#">quis nostrud exercitation</a> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Duis aute irure dolor in <strong>reprehenderit in</strong> voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum velit esse cillum <strong>dolore eu fugiat.</strong></p>
+    </div>
   </div>
 </div>
 
-<router-outlet></router-outlet>
+<app-work-time></app-work-time>
 
