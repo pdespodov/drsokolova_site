@@ -13,10 +13,20 @@ export class WorkTimeComponent implements OnInit {
     var that = this;
 
     window.addEventListener('scroll', function(e) {
-      let element = document.getElementById("icon-week");
+      let week1 = document.getElementById("icon-week");
+      let week2 = document.getElementById("icon-week2");
 
-      if (that.isScrolledIntoView(element)) {
-        document.getElementById("work-time").querySelectorAll(".reveal-item").forEach(r => {
+      if (that.isScrolledIntoView(week1)) {
+        document.querySelectorAll(".reveal-item-week-1").forEach(r => {
+          r.classList.add("reveal-item-is-visible");
+        });
+      }
+
+      if (that.isScrolledIntoView(week2)) {
+        document.querySelectorAll(".reveal-item-week-2").forEach(r => {
+          r.classList.add("reveal-item-is-visible");
+        });
+        document.querySelectorAll(".reveal-item-week-3").forEach(r => {
           r.classList.add("reveal-item-is-visible");
         });
       }

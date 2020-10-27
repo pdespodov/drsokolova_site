@@ -25,4 +25,14 @@ export class AppComponent implements OnInit {
     document.querySelector(".site-header").classList.toggle("site-header-is-expanded");
     document.querySelector(".site-header-menu-content").classList.toggle("site-header-menu-content-is-visible");
   }
+
+  public scrollToWorkTime(event) {
+    event.preventDefault();
+    
+    document.getElementById("work-time").scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest'
+    });
+  }
 }

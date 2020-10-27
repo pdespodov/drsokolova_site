@@ -18,8 +18,9 @@
       </div>
       <nav class="primary-nav primary-nav-pull-right">
         <ul>
-          <li><a href="#our-beginning" id="our-beginning-link">Работно Време</a></li>
+          <li><a href="#" id="work-time-link" (click)="scrollToWorkTime($event)">Работно Време</a></li>
           <li><a href="#features" id="features-link">Контакти</a></li>
+          <app-language-selector-component></app-language-selector-component>
         </ul>
       </nav>
     </div>
@@ -31,7 +32,7 @@
   <div class="large-hero-text-content">
     <div class="wrapper">
       <h2 class="large-hero-subtitle">Запазете час бързо и лесно</h2>
-      <p class="large-hero-description">За информация относно свободни часове, проверете <a href="#">тук</a></p>
+      <p class="large-hero-description">За информация относно график по кабинети, проверете <a href="#">тук</a></p>
       <p><a href="#" class="btn btn--orange btn--large open-modal">Запази час</a></p>
     </div>
   </div>
