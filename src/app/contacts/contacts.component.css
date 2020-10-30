@@ -1,0 +1,17 @@
+.bi {
+    width: 46px;
+    height: 46px;
+    vertical-align: top;
+}
+
+#address-map {
+    cursor: pointer;
+    font-size: 0.5em;
+    color: #d59541;
+    text-decoration: underline;
+}
+
+#address-text {
+    text-decoration: underline;
+    cursor: pointer;
+}

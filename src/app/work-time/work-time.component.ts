@@ -20,6 +20,10 @@ export class WorkTimeComponent implements OnInit {
         document.querySelectorAll(".reveal-item-week-1").forEach(r => {
           r.classList.add("reveal-item-is-visible");
         });
+      } else {
+        document.querySelectorAll(".reveal-item-week-1").forEach(r => {
+          r.classList.remove("reveal-item-is-visible");
+        });
       }
 
       if (that.isScrolledIntoView(week2)) {
@@ -28,6 +32,13 @@ export class WorkTimeComponent implements OnInit {
         });
         document.querySelectorAll(".reveal-item-week-3").forEach(r => {
           r.classList.add("reveal-item-is-visible");
+        });
+      } else {
+        document.querySelectorAll(".reveal-item-week-2").forEach(r => {
+          r.classList.remove("reveal-item-is-visible");
+        });
+        document.querySelectorAll(".reveal-item-week-3").forEach(r => {
+          r.classList.remove("reveal-item-is-visible");
         });
       }
     });
