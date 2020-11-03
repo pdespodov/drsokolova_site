@@ -11,7 +11,13 @@
     text-decoration: underline;
 }
 
-#address-text {
+.contact-text {
     text-decoration: underline;
     cursor: pointer;
+}
+
+@media (min-width: 800px) {
+    .feature-item {
+        padding-bottom: 0;
+    }
 }

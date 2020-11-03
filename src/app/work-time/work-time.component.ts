@@ -15,14 +15,12 @@ export class WorkTimeComponent implements OnInit {
     window.addEventListener('scroll', function(e) {
       let week1 = document.getElementById("icon-week");
       let week2 = document.getElementById("icon-week2");
+      let week1Content = document.querySelector(".reveal-item-week-1");
+      let week2Content = document.querySelector(".reveal-item-week-2");
 
       if (that.isScrolledIntoView(week1)) {
         document.querySelectorAll(".reveal-item-week-1").forEach(r => {
           r.classList.add("reveal-item-is-visible");
-        });
-      } else {
-        document.querySelectorAll(".reveal-item-week-1").forEach(r => {
-          r.classList.remove("reveal-item-is-visible");
         });
       }
 
@@ -33,7 +31,15 @@ export class WorkTimeComponent implements OnInit {
         document.querySelectorAll(".reveal-item-week-3").forEach(r => {
           r.classList.add("reveal-item-is-visible");
         });
-      } else {
+      }
+
+      if(that.isScrolledOutOfView(week1Content)) {
+        document.querySelectorAll(".reveal-item-week-1").forEach(r => {
+          r.classList.remove("reveal-item-is-visible");
+        });
+      }
+
+      if(that.isScrolledOutOfView(week2Content)) {
         document.querySelectorAll(".reveal-item-week-2").forEach(r => {
           r.classList.remove("reveal-item-is-visible");
         });
@@ -53,5 +59,14 @@ export class WorkTimeComponent implements OnInit {
       var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
 
       return isVisible;
+  }
+
+  public isScrolledOutOfView(el) {
+    var rect = el.getBoundingClientRect();
+    var elemTop = rect.top;
+
+    var scrolledOut = elemTop > window.innerHeight;
+
+    return scrolledOut;
   }
 }

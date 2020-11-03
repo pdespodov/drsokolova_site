@@ -7,13 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsComponent implements OnInit {
   iconAddress: HTMLElement;
+  contacts: HTMLElement;
 
   constructor() { }
 
   ngOnInit() {
     var that = this;
     this.iconAddress = document.getElementById("icon-address");
-    
+    this.contacts = document.getElementById("contacts");
+
     this.checkAddress(that);
 
     window.addEventListener('scroll', function(e) {
@@ -32,6 +34,15 @@ export class ContactsComponent implements OnInit {
     return isVisible;
   }
 
+  public isScrolledOutOfView(el) {
+    var rect = el.getBoundingClientRect();
+    var elemTop = rect.top;
+
+    var scrolledOut = elemTop > window.innerHeight;
+
+    return scrolledOut;
+  }
+
   public checkAddress(that:any) {
     if (that.isScrolledIntoView(that.iconAddress)) {
       document.querySelectorAll(".reveal-item-address").forEach(r => {
@@ -40,6 +51,12 @@ export class ContactsComponent implements OnInit {
     } else {
       document.querySelectorAll(".reveal-item-address").forEach(r => {
         r.classList.remove("reveal-item-is-visible");
+      });
+    }
+
+    if(that.isScrolledOutOfView(this.contacts)) {
+      document.querySelectorAll(".reveal-item-address").forEach(r => {
+        r.classList.add("reveal-item-is-visible");
       });
     }
   }
