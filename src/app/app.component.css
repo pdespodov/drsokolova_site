@@ -22,6 +22,11 @@
     padding: 25px 36px;
 }
 
+.site-header-logo img {
+    height: 120%;
+    max-width: 120%;
+}
+
 .site-header-logo-graphic {
     color: white;
     text-align: center;
@@ -231,6 +236,7 @@
     }
 
     .site-header-logo {
+        padding-top: 15px;
         left: auto;
         transform: translateX(0);
     }
@@ -305,6 +311,11 @@
         width: 100%;
     }
 
+    .row-medium-3 {
+        float: left;
+        width: 33%;
+    }
+
     .feature-item {
         padding-left: 94px;
         position: relative;
@@ -312,7 +323,7 @@
     }
 
     .site-header-scroll .site-header-logo {
-        transform: scale(.56);
+        transform: scale(.62);
     }
 
     .feature-item-icon {
@@ -364,6 +375,16 @@
 
     .section-title {
         font-size: 2rem;
+    }
+
+    .site-header-logo {
+        padding-left: 0;
+    }
+
+    .site-header-logo img {
+        width: 120%;
+        height: 120%;
+        max-width: 120%;
     }
 }
 

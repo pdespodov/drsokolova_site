@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { WorkTimeComponent } from './work-time/work-time.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
-  //{ path: '', component: WorkTimeComponent },
+  { path: 'about', component: AboutComponent }
   //{ path: '**', component: WorkTimeComponent },  // Wildcard route for a 404 page
 ];
 

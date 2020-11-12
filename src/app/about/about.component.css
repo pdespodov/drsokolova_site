@@ -1,0 +1,54 @@
+.bi {
+    width: 46px;
+    height: 46px;
+    vertical-align: top;
+}
+
+.bi-file-person-fill {
+    width: inherit;
+    height: inherit;
+}
+
+.about-me-section {
+    height: 4rem;
+    color: white;
+    background-color: #2f5572;
+    border-right: 1px solid white;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.about-me-section .bi {
+    width: 1.3rem;
+}
+
+.hovered {
+    background-color: #d59541;
+    transition: background-color .3s ease-out;
+}
+
+.hovered .bi {
+    color: #2f5572;
+    fill: #2f5572;
+}
+
+.bi-x-circle-fill {
+    float: right;
+    width: 30px;
+    height: initial;
+    cursor: pointer;
+}
+
+.bi-x-circle-fill:hover {
+    transition: fill .3s ease-out;
+    fill: #d59541;
+}
+
+@media (min-width: 800px) {
+    .page-section {
+        padding-bottom: 1rem;
+    }
+}

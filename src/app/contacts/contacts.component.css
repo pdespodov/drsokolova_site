@@ -4,6 +4,11 @@
     vertical-align: top;
 }
 
+.bi-info-square-fill {
+    width: inherit;
+    height: inherit;
+}
+
 #address-map {
     cursor: pointer;
     font-size: 0.5em;
@@ -14,10 +19,15 @@
 .contact-text {
     text-decoration: underline;
     cursor: pointer;
+    color: #d59541;
 }
 
 @media (min-width: 800px) {
     .feature-item {
         padding-bottom: 0;
+    }
+
+    #contacts-title {
+        margin-bottom: 0;
     }
 }

@@ -1,7 +1,8 @@
 <header class="site-header">
   <div class="wrapper">
     <div class="site-header-logo">
-      <div class="site-header-logo-graphic icon icon-clear-logo">Д-р Искра Соколова <br/> <i>Семеен лекар</i></div>
+      <div class="site-header-logo-graphic icon icon-clear-logo">
+        <img src="../assets/images/logo.png"/><!--Д-р Искра Соколова <br/> <i>Семеен лекар</i>--></div>
     </div>
 
     <div class="site-header-menu-icon" id="site-header-menu-icon" (click)="toggleMobileMenu($event)">
@@ -13,13 +14,13 @@
     </div>
 
     <div class="site-header-menu-content">
-      <div class="site-header-btn-container">
+      <!--<div class="site-header-btn-container">
         <a href="#" class="btn open-modal">Запази Час</a>
-      </div>
+      </div>-->
       <nav class="primary-nav primary-nav-pull-right">
         <ul>
           <li><a href="#" id="work-time-link" (click)="scrollToWorkTime($event)">Работно Време</a></li>
-          <li><a href="#features" id="features-link">Контакти</a></li>
+          <li><a routerLink="/about" id="about-link">За мен</a></li>
           <app-language-selector-component></app-language-selector-component>
         </ul>
       </nav>
@@ -31,15 +32,17 @@
   <img src="../assets/images/25909.jpg" id="header-image" />
   <div class="large-hero-text-content">
     <div class="wrapper">
-      <h2 class="large-hero-subtitle">Запазете час бързо и лесно</h2>
-      <p class="large-hero-description">За информация относно график по кабинети, проверете <a href="#">тук</a></p>
+      <h2 class="large-hero-subtitle">Д-р Искра Соколова<br/><strong>семеен лекар</strong></h2>
+      <p class="large-hero-description">За информация относно ценоразпис, проверете <a href="#">тук</a></p>
       <p><a href="#" class="btn btn--orange btn--large open-modal">Запази час</a></p>
     </div>
   </div>
 </div>
 
-<router-outlet></router-outlet>
-<app-contacts></app-contacts>
+<div style="display: inline;">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
 
+<app-contacts></app-contacts>
 <app-work-time></app-work-time>
 

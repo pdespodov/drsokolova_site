@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { WorkTimeComponent } from './work-time/work-time.component';
 import { LanguageSelectorComponentComponent } from './language-selector-component/language-selector-component.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { ContactsComponent } from './contacts/contacts.component';
     WorkTimeComponent,
     LanguageSelectorComponentComponent,
     ContactsComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,7 @@ export class ContactsComponent implements OnInit {
   ngOnInit() {
     var that = this;
     this.iconAddress = document.getElementById("icon-address");
-    this.contacts = document.getElementById("contacts");
+    this.contacts = document.getElementById("contacts-wrapper");
 
     this.checkAddress(that);
 
