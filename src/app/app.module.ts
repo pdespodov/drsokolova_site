@@ -6,6 +6,7 @@ import { WorkTimeComponent } from './work-time/work-time.component';
 import { LanguageSelectorComponentComponent } from './language-selector-component/language-selector-component.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { AboutComponent } from './about/about.component';
+import { NgxGalleryModule } from 'ngx-gallery';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AboutComponent } from './about/about.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxGalleryModule
   ],
   providers: [],
   bootstrap: [AppComponent]

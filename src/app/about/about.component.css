@@ -19,6 +19,7 @@
     padding-left: 1rem;
     font-size: 1.2rem;
     cursor: pointer;
+    margin-bottom: 0.5rem;
 }
 
 .about-me-section .bi {
@@ -47,8 +48,39 @@
     fill: #d59541;
 }
 
+.generic-content-container {
+    margin-left: -18px;
+}
+
+.about-arrow {
+    position: absolute;
+    left: 15rem;
+    font-size: 2rem;
+}
+
+.about-gallery {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.about-gallery {
+    margin-right: -18px;
+}
+
 @media (min-width: 800px) {
     .page-section {
         padding-bottom: 1rem;
+    }
+
+    .generic-content-container {
+        margin-left: 0;
+    }
+
+    .about-me-section {
+        margin-bottom: 0;
+    }
+
+    .about-gallery {
+        margin-right: 0;
     }
 }

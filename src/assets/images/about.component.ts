@@ -16,31 +16,20 @@ export class AboutComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.galleryOptions = [
-      { "thumbnails": false, "width": "400px", "height": "300px" },
+      { "thumbnails": false },
       { "breakpoint": 500, "width": "100%", "height": "200px" }
     ];
     this.galleryImages = [
       {
-          medium: 'https://images.theconversation.com/files/304957/original/file-20191203-66986-im7o5.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop',
-          big: 'https://images.theconversation.com/files/304957/original/file-20191203-66986-im7o5.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop'
+          medium: '../../assets/1-medium.jpeg'
       },
       {
-          medium: 'https://www.lewermark.com/wp-content/uploads/2018/07/doctor5-1.png',
-          big: 'https://www.lewermark.com/wp-content/uploads/2018/07/doctor5-1.png'
+          medium: '../../assets/2-medium.jpeg'
       },
       {
-          medium: 'https://health.uconn.edu/orthopedics-sports-medicine/wp-content/uploads/sites/161/2018/03/child-doctor-highfive.jpg',
-          big: 'https://health.uconn.edu/orthopedics-sports-medicine/wp-content/uploads/sites/161/2018/03/child-doctor-highfive.jpg'
+          medium: '../../assets/3-medium.jpeg'
       }
-    ];
-
-    setTimeout(() => {
-      var els = document.getElementsByClassName("ngx-gallery-arrow");
-      Array.prototype.forEach.call(els, function(el) {
-          console.log(el);
-          el.style.color = "#2f5572";
-      });
-    }, 400);
+  ];
   }
 
   ngAfterViewInit() {
