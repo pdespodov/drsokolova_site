@@ -7,6 +7,9 @@ import { LanguageSelectorComponentComponent } from './language-selector-componen
 import { ContactsComponent } from './contacts/contacts.component';
 import { AboutComponent } from './about/about.component';
 import { NgxGalleryModule } from 'ngx-gallery';
+import { QualificationsComponent } from './about/qualifications/qualifications.component';
+import { CertificatesComponent } from './about/certificates/certificates.component';
+import { MembershipsComponent } from './about/memberships/memberships.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +18,9 @@ import { NgxGalleryModule } from 'ngx-gallery';
     LanguageSelectorComponentComponent,
     ContactsComponent,
     AboutComponent,
+    QualificationsComponent,
+    CertificatesComponent,
+    MembershipsComponent
   ],
   imports: [
     BrowserModule,

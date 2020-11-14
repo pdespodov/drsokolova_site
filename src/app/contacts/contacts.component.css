@@ -28,6 +28,12 @@
     }
 
     #contacts-title {
-        margin-bottom: 0;
+        margin-bottom: 0.3em;
+    }
+}
+
+@media (max-width: 600px) and (min-width: 200px)  {
+    .contact-text {
+        text-align: center;
     }
 }

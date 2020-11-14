@@ -1,0 +1,32 @@
+.bi-x-circle-fill {
+    float: right;
+    width: 30px;
+    height: initial;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.bi-x-circle-fill:hover {
+    transition: fill .3s ease-out;
+    fill: #d59541;
+}
+
+.section-title {
+    margin-bottom: 0;
+}
+
+p {
+    line-height: initial;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 1.25em;
+}
+
+@media (max-width: 600px) and (min-width: 200px) {
+    .bi-x-circle-fill {
+        width: 25px;
+        margin-top: 10px;
+    }
+}

@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,9 @@ import { RouterOutlet } from '@angular/router';
 })
 
 export class AppComponent implements OnInit {
+  constructor(public router: Router) {
+  }
+
   title = 'Д-р Искра Соколва - GP';
 
   ngOnInit() {
@@ -37,9 +40,17 @@ export class AppComponent implements OnInit {
     });
   }
 
-  prepareRoute(outlet: RouterOutlet) {
-    return outlet && 
-      outlet.activatedRouteData && 
-      outlet.activatedRouteData['animationState'];
+   goToAbout(event: MouseEvent) {
+      event.preventDefault();
+
+      this.router.navigate(['about']);
+       
+      setTimeout(() => {
+          document.getElementById("about").scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest'
+        });
+      }, 300);
    }
 }

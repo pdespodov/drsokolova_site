@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-contacts',
@@ -8,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class ContactsComponent implements OnInit {
   iconAddress: HTMLElement;
   contacts: HTMLElement;
+  innerWidth: number = 0;
 
   constructor() { }
 
   ngOnInit() {
+    this.innerWidth = window.innerWidth;
     var that = this;
     this.iconAddress = document.getElementById("icon-address");
     this.contacts = document.getElementById("contacts-wrapper");
@@ -21,6 +23,11 @@ export class ContactsComponent implements OnInit {
     window.addEventListener('scroll', function(e) {
       that.checkAddress(that);
     });
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
   }
 
   public isScrolledIntoView(el) {
@@ -49,9 +56,10 @@ export class ContactsComponent implements OnInit {
         r.classList.add("reveal-item-is-visible");
       });
     } else {
-      document.querySelectorAll(".reveal-item-address").forEach(r => {
-        r.classList.remove("reveal-item-is-visible");
-      });
+      if(this.innerWidth > 800)
+        document.querySelectorAll(".reveal-item-address").forEach(r => {
+          r.classList.remove("reveal-item-is-visible");
+        });
     }
 
     if(that.isScrolledOutOfView(this.contacts)) {

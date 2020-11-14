@@ -1,0 +1,22 @@
+<div id="certificates" class="page-section reveal-item">
+  <div class="wrapper">
+    <h2 class="section-title">
+      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-award-fill" 
+          fill="#d59541" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 0l1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/>
+          <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+      </svg>
+      Сертификати
+      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle-fill" 
+        fill="currentColor" xmlns="http://www.w3.org/2000/svg" (click)="close()">
+        <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+      </svg>
+    </h2>
+
+    <div class="row row-gutters-large generic-content-container">
+      <div class="row-medium-12 certificates-gallery">
+        <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+      </div>
+    </div>
+  </div>
+</div>

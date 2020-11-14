@@ -354,13 +354,22 @@
     }
 
     .section-title {
-        font-size: 2.9rem;
+        font-size: 2.5rem;
+    }
+
+    .section-title-less-margin {
+        margin-bottom: 1.3rem;
+        margin-top: 0;
+    }
+
+    .section-title-blue {
+        color: #2f5572;
     }
 
     .feature-item-title {
         text-align: left;
         margin-top: 1em;
-        font-size: 1.875rem;
+        font-size: 1.8rem;
     }
 
     .generic-content-container p {

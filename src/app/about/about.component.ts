@@ -13,6 +13,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
   hovered: string = "";
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
+  showQualification: boolean = false;
 
   ngOnInit() {
     this.galleryOptions = [
@@ -37,8 +38,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       var els = document.getElementsByClassName("ngx-gallery-arrow");
       Array.prototype.forEach.call(els, function(el) {
-          console.log(el);
-          el.style.color = "#2f5572";
+          el.style.color = "#d59541";
       });
     }, 400);
   }
@@ -46,7 +46,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     setTimeout(() => {
       document.getElementById("about").classList.add("reveal-item-is-visible");
-    });
+  });
   }
 
   public aboutMeHover(event: MouseEvent, hovered: string) {
@@ -85,4 +85,15 @@ export class AboutComponent implements OnInit, AfterViewInit {
     }, 300);
   }
 
+  public goToQualifications(){
+    this.router.navigate(['about/qualifications']);
+  }
+
+  public goToCertificates(){
+    this.router.navigate(['about/certificates']);
+  }
+
+  public goToMemberships(){
+    this.router.navigate(['about/memberships']);
+  }
 }
